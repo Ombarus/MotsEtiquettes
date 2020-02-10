@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Board.gd" type="Script" id=2]
+[ext_resource path="res://data/fonts/DejaVuSansMono.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+size = 74
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.176471, 0.52549, 0.12549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.784314, 0.133333, 0.133333, 1 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Board" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Board"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 108.0
+margin_top = 91.0
+margin_right = -113.0
+margin_bottom = -132.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Card" parent="Board/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 399.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Card2" parent="Board/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 403.0
+margin_right = 802.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Card3" parent="Board/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 190.0
+margin_right = 399.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Card4" parent="Board/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 403.0
+margin_top = 190.0
+margin_right = 802.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Word" type="Label" parent="Board"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -119.0
+text = "Chapeau"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Board"]
+anchor_right = 1.0
+margin_left = 23.0
+margin_right = -24.0
+margin_bottom = 94.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Board/HBoxContainer"]
+margin_top = 3.0
+margin_right = 486.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+text = "23 sec"
+
+[node name="Rate" type="Label" parent="Board/HBoxContainer"]
+margin_left = 490.0
+margin_top = 3.0
+margin_right = 977.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+align = 2
+
+[node name="Success" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Success"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Success/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.5
+margin_top = -73.0
+margin_right = 168.5
+margin_bottom = 73.0
+text = "BRAVO !!!"
+align = 1
+valign = 1
+
+[node name="Fail" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Fail"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Fail/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.5
+margin_top = -73.0
+margin_right = 168.5
+margin_bottom = 73.0
+text = "Manqué :("
+align = 1
+valign = 1

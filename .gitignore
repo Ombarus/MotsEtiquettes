@@ -1,0 +1,9 @@
+.import
+*tmp*
+/logs.txt
+/secret
+*.png~
+*~
+SolarRogue*.exe
+*.apk
+/data/src/spyros

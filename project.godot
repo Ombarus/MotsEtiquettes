@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Preloader="*res://scripts/Preloader.gd"
 Events="*res://scripts/Events.gd"
+PermSave="*res://scripts/PermSave.gd"
 
 [rendering]
 

@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://data/themes/Main.tres" type="Theme" id=1]
+[ext_resource path="res://data/exam_btn_group.tres" type="ButtonGroup" id=2]
+[ext_resource path="res://data/profile_btn_group.tres" type="ButtonGroup" id=3]
+[ext_resource path="res://scenes/NewProfile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=5]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 26.0
+margin_top = 18.0
+margin_right = -34.0
+margin_bottom = -26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profile" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 306.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="Profile0" type="Button" parent="HBoxContainer/Profile"]
+margin_right = 306.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 3 )
+text = "Papa"
+
+[node name="Profile1" type="Button" parent="HBoxContainer/Profile"]
+margin_top = 107.0
+margin_right = 306.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 3 )
+text = "Clara"
+
+[node name="Profile2" type="Button" parent="HBoxContainer/Profile"]
+margin_top = 214.0
+margin_right = 306.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 3 )
+text = "Lily"
+
+[node name="Profile3" type="Button" parent="HBoxContainer/Profile"]
+margin_top = 321.0
+margin_right = 306.0
+margin_bottom = 414.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 3 )
+text = "Maman"
+
+[node name="Control" type="Control" parent="HBoxContainer/Profile"]
+margin_top = 428.0
+margin_right = 306.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AddProfile" type="Button" parent="HBoxContainer/Profile/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -53.5
+margin_top = -46.5
+margin_right = 53.5
+margin_bottom = 46.5
+rect_min_size = Vector2( 50, 50 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+margin_left = 310.0
+margin_right = 325.0
+margin_bottom = 556.0
+custom_constants/separation = 15
+
+[node name="Exam" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 329.0
+margin_right = 635.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="Play10" type="Button" parent="HBoxContainer/Exam"]
+margin_right = 306.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 2 )
+text = "10"
+
+[node name="Play20" type="Button" parent="HBoxContainer/Exam"]
+margin_top = 107.0
+margin_right = 306.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 2 )
+text = "20"
+
+[node name="Play50" type="Button" parent="HBoxContainer/Exam"]
+margin_top = 214.0
+margin_right = 306.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 2 )
+text = "50"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+margin_left = 639.0
+margin_right = 654.0
+margin_bottom = 556.0
+custom_constants/separation = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
+margin_left = 658.0
+margin_right = 964.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/ScrollContainer"]
+margin_right = 306.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NewProfile" parent="." instance=ExtResource( 4 )]
+visible = false
+[connection signal="toggled" from="HBoxContainer/Exam/Play10" to="." method="_on_Play10_toggled"]
+[connection signal="toggled" from="HBoxContainer/Exam/Play20" to="." method="_on_Play20_toggled"]
+[connection signal="toggled" from="HBoxContainer/Exam/Play50" to="." method="_on_Play50_toggled"]

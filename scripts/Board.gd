@@ -5,6 +5,8 @@ var _wait_time : float = 0.0
 var _play_time : float = 0.0
 var _num_play : int = 0
 var _num_success : int = 0
+var _max_play : int = 10
+var _current_player : String = "Papa"
 var CurrentCard = null
 
 onready var _success : Control = get_node("../Success")
@@ -20,9 +22,13 @@ func _ready():
 	Play()
 	
 	Events.connect("OnCardClicked", self, "OnCardClicked_Callback")
+	Events.connect("StartGame", self, "StartGame_Callback")
 	get_node("HBoxContainer/Rate").text = "%d / %d" % [_num_success, _num_play]
 	
 func Play():
+	if CheckEndGame() == true:
+		return
+	
 	var names := []
 	for i in range(_card_array.size()):
 		names.push_back(Preloader.GetRandomName(names))
@@ -34,6 +40,16 @@ func Play():
 	CurrentCard = _card_array[good]
 	
 	get_node("Word").text = CurrentCard.Name
+	
+func StartGame_Callback(profile : String, numplay : int):
+	_current_player = profile
+	_max_play = numplay
+	_play_time = 0.0
+	_num_success = 0
+	_num_play = 0
+	_wait_time = 0.0
+	Play()
+	
 	
 func OnCardClicked_Callback(name : String):
 	if CurrentCard.Name == name:
@@ -66,3 +82,8 @@ func _input(event):
 			_success.visible = false
 			_fail.visible = false
 			Play()
+
+func CheckEndGame():
+	if _num_play >= _max_play-1:
+		get_node("../MainMenu").visible = true
+		

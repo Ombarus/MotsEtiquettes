@@ -11,8 +11,8 @@ func _ready():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			print(file_name.get_extension())
-			if file_name.get_extension() == "png":
+			if file_name.get_extension() == "import":
+				file_name = file_name.trim_suffix(".import")
 				var key = file_name.trim_suffix(".png")
 				var data = load("res://data/textures/cards/" + file_name)
 				_tex_array[key] = data

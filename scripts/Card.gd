@@ -13,6 +13,7 @@ func _ready():
 	pass # Replace with function body.
 
 func Init(name : String):
+	print("Set texture %s" % name)
 	self.texture = Preloader.GetTexture(name)
 
 

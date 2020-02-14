@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Control",
+"class": "LeaderboardRow",
+"language": "GDScript",
+"path": "res://scripts/LeaderboardRow.gd"
+} ]
 _global_script_class_icons={
-
+"LeaderboardRow": ""
 }
 
 [application]
@@ -24,6 +29,12 @@ config/icon="res://icon.png"
 Preloader="*res://scripts/Preloader.gd"
 Events="*res://scripts/Events.gd"
 PermSave="*res://scripts/PermSave.gd"
+
+[locale]
+
+test="fr"
+fallback="fr"
+translations=PoolStringArray( "res://data/translation/base.fr.translation" )
 
 [rendering]
 

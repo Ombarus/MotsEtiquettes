@@ -8,7 +8,7 @@ enum END_GAME_STATE {
 	won
 }
 
-const CURRENT_VERSION := 1
+const CURRENT_VERSION := 2
 
 #TODO: Might want to add more info about the player (cargo inventory, # of turn spent, etc.
 var _perm_save = {
@@ -27,7 +27,7 @@ var _perm_save = {
 	},
 	"profiles": ["Clara", "Papa", "Lily", "Maman"],
 	"leaderboard": [
-		{"player_name":"Papa", "time_sec":200, "mistake":0, "total":10}
+		{"player_name":"Papa", "time_sec":200, "mistake":0, "total":10, "datetime":0}
 	]
 }
 

@@ -14,10 +14,17 @@ func EndGame_Callback(_time : float, _mistakes : int, _total : int):
 func Refresh():
 	Clear()
 	var leaderboard : Array = PermSave.get_attrib("leaderboard")
+	var most_recent = null
+	for entry in leaderboard:
+		if most_recent == null or entry.datetime > most_recent.datetime:
+			most_recent = entry
 	for entry in leaderboard:
 		if entry.total == GameCount:
 			var n = Row.instance()
-			n.SetData(entry)
+			if entry == most_recent:
+				n.SetData(entry, true)
+			else:
+				n.SetData(entry)
 			call_deferred("add_child", n)
 
 func Clear():

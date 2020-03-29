@@ -9,6 +9,7 @@ var _max_play : int = 10
 var _current_player : String = "Papa"
 var CurrentCard = null
 var Paused = true
+var _last_tap : int = -1000
 
 onready var _success : Control = get_node("../Success")
 onready var _fail : Control = get_node("../Fail")
@@ -42,6 +43,7 @@ func Play():
 	CurrentCard = _card_array[good]
 	
 	get_node("Word").text = tr(CurrentCard.Name)
+	_last_tap = OS.get_ticks_msec()
 	
 func StartGame_Callback(profile : String, numplay : int):
 	_current_player = profile
@@ -60,6 +62,8 @@ func EndGame_Callback(_time : float, _mistakes : int, _total : int):
 	
 	
 func OnCardClicked_Callback(name : String):
+	if OS.get_ticks_msec() - _last_tap < 400:
+		return
 	if CurrentCard.Name == name:
 		_success.visible = true
 		_num_success += 1

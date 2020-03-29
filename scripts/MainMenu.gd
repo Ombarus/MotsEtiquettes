@@ -41,6 +41,7 @@ func EndGame_Callback(time_sec : float, num_success : int, num_play : int):
 	data["time_sec"] = time_sec
 	data["mistake"] = num_play - num_success
 	data["total"] = num_play
+	data["datetime"] = OS.get_unix_time()
 	
 	var leaderboard = PermSave.get_attrib("leaderboard")
 	for i in range(leaderboard.size()):

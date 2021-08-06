@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/themes/Main.tres" type="Theme" id=1]
 [ext_resource path="res://data/exam_btn_group.tres" type="ButtonGroup" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scripts/Leaderboard.gd" type="Script" id=6]
 [ext_resource path="res://scenes/LeaderboardRow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://data/fonts/dejavu_sans_mono.tres" type="DynamicFont" id=8]
+[ext_resource path="res://data/lang_btn_group.tres" type="ButtonGroup" id=9]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -139,6 +140,36 @@ rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 2 )
 text = "50"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Exam"]
+margin_top = 321.0
+margin_right = 306.0
+margin_bottom = 556.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Exam/VBoxContainer"]
+margin_right = 306.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="French" type="CheckBox" parent="HBoxContainer/Exam/VBoxContainer"]
+margin_top = 139.0
+margin_right = 306.0
+margin_bottom = 185.0
+custom_fonts/font = ExtResource( 8 )
+pressed = true
+group = ExtResource( 9 )
+text = "Français"
+
+[node name="English" type="CheckBox" parent="HBoxContainer/Exam/VBoxContainer"]
+margin_top = 189.0
+margin_right = 306.0
+margin_bottom = 235.0
+custom_fonts/font = ExtResource( 8 )
+group = ExtResource( 9 )
+text = "English"
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
 margin_left = 639.0
@@ -290,6 +321,9 @@ GameCount = 50
 
 [node name="NewProfile" parent="." instance=ExtResource( 4 )]
 visible = false
+
 [connection signal="toggled" from="HBoxContainer/Exam/Play10" to="." method="_on_Play10_toggled"]
 [connection signal="toggled" from="HBoxContainer/Exam/Play20" to="." method="_on_Play20_toggled"]
 [connection signal="toggled" from="HBoxContainer/Exam/Play50" to="." method="_on_Play50_toggled"]
+[connection signal="pressed" from="HBoxContainer/Exam/VBoxContainer/French" to="." method="_on_French_pressed"]
+[connection signal="pressed" from="HBoxContainer/Exam/VBoxContainer/English" to="." method="_on_English_pressed"]

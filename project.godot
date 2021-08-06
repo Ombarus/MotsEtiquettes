@@ -34,8 +34,9 @@ PermSave="*res://scripts/PermSave.gd"
 
 test="fr"
 fallback="fr"
-translations=PoolStringArray( "res://data/translation/base.fr.translation" )
+translations=PoolStringArray( "res://data/translation/base.fr.translation", "res://data/translation/base.en.translation" )
 
 [rendering]
 
+vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

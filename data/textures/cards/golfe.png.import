@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/golfe.png-d9bcc52603b21849553b8f7ff9ed6e62.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://data/textures/cards/golfe.png"
+dest_files=[ "res://.import/golfe.png-d9bcc52603b21849553b8f7ff9ed6e62.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

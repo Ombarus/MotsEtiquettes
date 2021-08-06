@@ -7,19 +7,28 @@ export(int) var GameCount = 10
 func _ready():
 	Refresh()
 	Events.connect("EndGame", self, "EndGame_Callback")
+	Events.connect("LangChange", self, "LangChange_Callback")
 	
 func EndGame_Callback(_time : float, _mistakes : int, _total : int):
 	Refresh()
 	
+func LangChange_Callback():
+	Refresh()
+	
 func Refresh():
 	Clear()
+	var lang : String = TranslationServer.get_locale()
+	if "fr" in lang:
+		lang = "fr"
+	elif "en" in lang:
+		lang = "en"
 	var leaderboard : Array = PermSave.get_attrib("leaderboard")
 	var most_recent = null
 	for entry in leaderboard:
 		if most_recent == null or entry.datetime > most_recent.datetime:
 			most_recent = entry
 	for entry in leaderboard:
-		if entry.total == GameCount:
+		if entry.total == GameCount and lang in entry.lang:
 			var n = Row.instance()
 			if entry == most_recent:
 				n.SetData(entry, true)

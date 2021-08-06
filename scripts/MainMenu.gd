@@ -42,6 +42,7 @@ func EndGame_Callback(time_sec : float, num_success : int, num_play : int):
 	data["mistake"] = num_play - num_success
 	data["total"] = num_play
 	data["datetime"] = OS.get_unix_time()
+	data["lang"] = TranslationServer.get_locale()
 	
 	var leaderboard = PermSave.get_attrib("leaderboard")
 	for i in range(leaderboard.size()):
@@ -56,7 +57,7 @@ func EndGame_Callback(time_sec : float, num_success : int, num_play : int):
 	if data != null:
 		leaderboard.push_back(data)
 		
-	if leaderboard.size() > 20:
+	if leaderboard.size() > 200:
 		leaderboard.pop_back()
 		
 	PermSave.set_attrib("leaderboard", leaderboard)
@@ -65,3 +66,15 @@ func EndGame_Callback(time_sec : float, num_success : int, num_play : int):
 	var btn : BaseButton = get_node("HBoxContainer/Exam/Play10").group.get_pressed_button()
 	if btn != null:
 		btn.pressed = false
+
+
+func _on_French_pressed():
+	#var lang_str : String = _lang_options.get_item_metadata(ID)
+	#PermSave.set_attrib("settings.lang", lang_str)
+	TranslationServer.set_locale("fr")
+	Events.emit_signal("LangChange")
+
+
+func _on_English_pressed():
+	TranslationServer.set_locale("en")
+	Events.emit_signal("LangChange")

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/allumetes.png-a60019ecda74e374532ea2c1488b99a9.stex"
+path="res://.import/allumettes-c.png-959882375570c7fac2a0d284bce64cd2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/textures/cards/allumetes.png"
-dest_files=[ "res://.import/allumetes.png-a60019ecda74e374532ea2c1488b99a9.stex" ]
+source_file="res://data/textures/cards/allumettes-c.png"
+dest_files=[ "res://.import/allumettes-c.png-959882375570c7fac2a0d284bce64cd2.stex" ]
 
 [params]
 

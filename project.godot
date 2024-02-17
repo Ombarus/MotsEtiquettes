@@ -44,4 +44,5 @@ translations=PoolStringArray( "res://data/translation/base.fr.translation", "res
 [rendering]
 
 vram_compression/import_etc=true
+environment/default_clear_color=Color( 0.533333, 0.678431, 0.741176, 1 )
 environment/default_environment="res://default_env.tres"

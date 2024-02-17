@@ -1,0 +1,8 @@
+- implement add profile button
+- scroll profile section
+- button styling
+- delete profile interface
+- improve high score font
+- focus tab after match
+- Icon Design
+- Add particle fx to "BRAVO!"

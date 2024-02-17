@@ -30,6 +30,11 @@ Preloader="*res://scripts/Preloader.gd"
 Events="*res://scripts/Events.gd"
 PermSave="*res://scripts/PermSave.gd"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
 [locale]
 
 test="fr"

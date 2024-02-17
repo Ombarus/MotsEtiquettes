@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clindoeil.png-57ce1f98e96f0be4804462929c461dea.stex"
+path="res://.import/patins.png-41d9136047c14e9fb78cee7fe35160e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/textures/cards/clindoeil.png"
-dest_files=[ "res://.import/clindoeil.png-57ce1f98e96f0be4804462929c461dea.stex" ]
+source_file="res://data/textures/cards/patins.png"
+dest_files=[ "res://.import/patins.png-41d9136047c14e9fb78cee7fe35160e3.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

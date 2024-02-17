@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bagage.png-a9a802959d93ea9908ecf2b2a0b72ee3.stex"
+path="res://.import/insecte.png-6fef94810457f4a84a1f359b98a42704.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/textures/cards/bagage.png"
-dest_files=[ "res://.import/bagage.png-a9a802959d93ea9908ecf2b2a0b72ee3.stex" ]
+source_file="res://data/textures/cards/insecte.png"
+dest_files=[ "res://.import/insecte.png-6fef94810457f4a84a1f359b98a42704.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

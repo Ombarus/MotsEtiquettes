@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pneus.png-17eecff8b1c2a17abe90c45bc3bce523.stex"
+path="res://.import/golf.png-2843a4c8ed2e64e8622e24187c9f9f36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/textures/cards/pneus.png"
-dest_files=[ "res://.import/pneus.png-17eecff8b1c2a17abe90c45bc3bce523.stex" ]
+source_file="res://data/textures/cards/golf.png"
+dest_files=[ "res://.import/golf.png-2843a4c8ed2e64e8622e24187c9f9f36.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

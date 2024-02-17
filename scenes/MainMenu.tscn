@@ -59,7 +59,7 @@ margin_bottom = 200.0
 rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 3 )
-text = "Clara"
+text = "Child1"
 
 [node name="Profile2" type="Button" parent="HBoxContainer/Profile"]
 margin_top = 214.0
@@ -68,7 +68,7 @@ margin_bottom = 307.0
 rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 3 )
-text = "Lily"
+text = "Child2"
 
 [node name="Profile3" type="Button" parent="HBoxContainer/Profile"]
 margin_top = 321.0

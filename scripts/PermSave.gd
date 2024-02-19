@@ -25,7 +25,7 @@ var _perm_save = {
 		"hide_hud":false,
 		"lang":null
 	},
-	"profiles": ["Clara", "Papa", "Lily", "Maman"],
+	"profiles": ["Papa", "Maman"],
 	"leaderboard": [
 		{"player_name":"Papa", "time_sec":200, "mistake":0, "total":10, "datetime":0, "lang":"fr"}
 	]

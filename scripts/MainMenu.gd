@@ -1,12 +1,13 @@
 extends Control
 
-
+var ProfileRoot : Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("EndGame", self, "EndGame_Callback")
-	pass # Replace with function body.
-
+	Events.connect("ProfileChanged", self, "ReloadProfiles")
+	ProfileRoot = get_node("HBoxContainer/Profile/ScrollContainer/VBoxContainer")
+	ReloadProfiles()
 
 func _on_Play10_toggled(button_pressed):
 	if button_pressed:
@@ -26,8 +27,27 @@ func _on_Play50_toggled(button_pressed):
 		self.visible = false
 
 
+func ReloadProfiles():
+	var c : int = ProfileRoot.get_child_count()
+	for i in range(c-1, 0, -1):
+		var n : Node = ProfileRoot.get_child(i)
+		if n.name == "Example":
+			continue
+		ProfileRoot.remove_child(n)
+		n.queue_free()
+		
+	var profiles = PermSave.get_attrib("profiles")
+	var example = ProfileRoot.get_child(0)
+	for pname in profiles:
+		var n : Button = example.duplicate()
+		n.visible = true
+		n.name = pname
+		n.text = pname
+		ProfileRoot.add_child(n)
+
+
 func GetProfileName() -> String:
-	var btn : BaseButton = get_node("HBoxContainer/Profile/Profile0").group.get_pressed_button()
+	var btn : BaseButton = get_node("HBoxContainer/Profile/ScrollContainer/VBoxContainer/Example").group.get_pressed_button()
 	var profile_name = "Default"
 	if btn != null:
 		profile_name = btn.text
@@ -78,3 +98,7 @@ func _on_French_pressed():
 func _on_English_pressed():
 	TranslationServer.set_locale("en")
 	Events.emit_signal("LangChange")
+
+
+func _on_AddProfile_pressed() -> void:
+	get_node("NewProfile").visible = true

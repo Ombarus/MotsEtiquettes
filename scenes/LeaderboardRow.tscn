@@ -16,12 +16,9 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -565.0
-rect_min_size = Vector2( 0, 35 )
+rect_min_size = Vector2( 0, 55 )
 size_flags_horizontal = 3
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 NormalText = SubResource( 1 )
 HighlightText = SubResource( 2 )
 
@@ -43,8 +40,9 @@ __meta__ = {
 }
 
 [node name="name" type="Label" parent="Panel/HBoxContainer"]
-margin_right = 731.0
-margin_bottom = 38.0
+margin_top = 233.0
+margin_right = 1576.0
+margin_bottom = 281.0
 rect_min_size = Vector2( 0, 35 )
 size_flags_horizontal = 3
 size_flags_vertical = 6
@@ -53,20 +51,22 @@ text = "Nom"
 valign = 1
 
 [node name="mistake" type="Label" parent="Panel/HBoxContainer"]
-margin_left = 735.0
-margin_right = 880.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 145, 35 )
-custom_fonts/font = ExtResource( 2 )
+margin_left = 1580.0
+margin_top = 233.0
+margin_right = 1748.0
+margin_bottom = 281.0
+rect_min_size = Vector2( 168, 35 )
 custom_colors/font_color = Color( 0.984314, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Erreurs"
 valign = 1
 
 [node name="time" type="Label" parent="Panel/HBoxContainer"]
-margin_left = 884.0
-margin_right = 1024.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 140, 35 )
+margin_left = 1752.0
+margin_top = 233.0
+margin_right = 1920.0
+margin_bottom = 281.0
+rect_min_size = Vector2( 168, 35 )
 custom_fonts/font = ExtResource( 2 )
 text = "Temps"
 valign = 1

@@ -9,9 +9,7 @@
 [ext_resource path="res://scenes/LeaderboardRow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://data/fonts/dejavu_sans_mono.tres" type="DynamicFont" id=8]
 [ext_resource path="res://data/lang_btn_group.tres" type="ButtonGroup" id=9]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.533333, 0.678431, 0.741176, 1 )
+[ext_resource path="res://data/textures/bg-01.png" type="Texture" id=10]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -19,10 +17,12 @@ anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 5 )
 
-[node name="BG" type="Panel" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+mouse_filter = 0
+texture = ExtResource( 10 )
+stretch_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -31,149 +31,121 @@ margin_left = 26.0
 margin_top = 18.0
 margin_right = -34.0
 margin_bottom = -26.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Profile" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 502.0
+margin_right = 494.0
 margin_bottom = 1036.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 14
 
-[node name="Profile0" type="Button" parent="HBoxContainer/Profile"]
-margin_right = 502.0
-margin_bottom = 111.0
-rect_min_size = Vector2( 0, 70 )
-toggle_mode = true
-pressed = true
-group = ExtResource( 3 )
-text = "Papa"
-
-[node name="Profile1" type="Button" parent="HBoxContainer/Profile"]
-margin_top = 125.0
-margin_right = 502.0
-margin_bottom = 236.0
-rect_min_size = Vector2( 0, 70 )
-toggle_mode = true
-group = ExtResource( 3 )
-text = "Child1"
-
-[node name="Profile2" type="Button" parent="HBoxContainer/Profile"]
-margin_top = 250.0
-margin_right = 502.0
-margin_bottom = 361.0
-rect_min_size = Vector2( 0, 70 )
-toggle_mode = true
-group = ExtResource( 3 )
-text = "Child2"
-
-[node name="Profile3" type="Button" parent="HBoxContainer/Profile"]
-margin_top = 375.0
-margin_right = 502.0
-margin_bottom = 486.0
-rect_min_size = Vector2( 0, 70 )
-toggle_mode = true
-group = ExtResource( 3 )
-text = "Maman"
-
-[node name="Control" type="Control" parent="HBoxContainer/Profile"]
-margin_top = 500.0
-margin_right = 502.0
-margin_bottom = 1036.0
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Profile"]
+margin_right = 494.0
+margin_bottom = 923.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="AddProfile" type="Button" parent="HBoxContainer/Profile/Control"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -53.5
-margin_top = -93.0
-margin_right = 53.5
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Profile/ScrollContainer"]
+margin_right = 494.0
+margin_bottom = 923.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Example" type="Button" parent="HBoxContainer/Profile/ScrollContainer/VBoxContainer"]
+margin_right = 494.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 0, 70 )
+toggle_mode = true
+group = ExtResource( 3 )
+text = "Papa"
+
+[node name="AddProfile" type="Button" parent="HBoxContainer/Profile"]
+margin_top = 937.0
+margin_right = 494.0
+margin_bottom = 1036.0
 rect_min_size = Vector2( 50, 50 )
 text = "+"
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-margin_left = 506.0
-margin_right = 521.0
+margin_left = 498.0
+margin_right = 528.0
 margin_bottom = 1036.0
+rect_min_size = Vector2( 30, 0 )
 custom_constants/separation = 15
 
 [node name="Exam" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 525.0
-margin_right = 1027.0
+margin_left = 532.0
+margin_right = 1026.0
 margin_bottom = 1036.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 14
 
 [node name="Play10" type="Button" parent="HBoxContainer/Exam"]
-margin_right = 502.0
-margin_bottom = 111.0
+margin_right = 494.0
+margin_bottom = 99.0
 rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 2 )
 text = "10"
 
 [node name="Play20" type="Button" parent="HBoxContainer/Exam"]
-margin_top = 125.0
-margin_right = 502.0
-margin_bottom = 236.0
+margin_top = 113.0
+margin_right = 494.0
+margin_bottom = 212.0
 rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 2 )
 text = "20"
 
 [node name="Play50" type="Button" parent="HBoxContainer/Exam"]
-margin_top = 250.0
-margin_right = 502.0
-margin_bottom = 361.0
+margin_top = 226.0
+margin_right = 494.0
+margin_bottom = 325.0
 rect_min_size = Vector2( 0, 70 )
 toggle_mode = true
 group = ExtResource( 2 )
 text = "50"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Exam"]
-margin_top = 375.0
-margin_right = 502.0
+margin_top = 339.0
+margin_right = 494.0
 margin_bottom = 1036.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Exam/VBoxContainer"]
-margin_right = 502.0
-margin_bottom = 509.0
+margin_right = 494.0
+margin_bottom = 569.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="French" type="CheckBox" parent="HBoxContainer/Exam/VBoxContainer"]
-margin_top = 513.0
-margin_right = 502.0
-margin_bottom = 585.0
+margin_top = 573.0
+margin_right = 494.0
+margin_bottom = 633.0
 custom_fonts/font = ExtResource( 8 )
 pressed = true
 group = ExtResource( 9 )
 text = "Français"
 
 [node name="English" type="CheckBox" parent="HBoxContainer/Exam/VBoxContainer"]
-margin_top = 589.0
-margin_right = 502.0
-margin_bottom = 661.0
+margin_top = 637.0
+margin_right = 494.0
+margin_bottom = 697.0
 custom_fonts/font = ExtResource( 8 )
 group = ExtResource( 9 )
 text = "English"
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
-margin_left = 1031.0
-margin_right = 1046.0
+margin_left = 1030.0
+margin_right = 1060.0
 margin_bottom = 1036.0
+rect_min_size = Vector2( 30, 0 )
 custom_constants/separation = 15
 
 [node name="Control" type="Control" parent="HBoxContainer"]
-margin_left = 1050.0
+margin_left = 1064.0
 margin_right = 1860.0
 margin_bottom = 1036.0
 size_flags_horizontal = 3
@@ -188,7 +160,10 @@ custom_fonts/font = ExtResource( 8 )
 [node name="10" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 88.0
+margin_left = 12.0
+margin_top = 94.0
+margin_right = -6.0
+margin_bottom = -6.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -196,19 +171,19 @@ __meta__ = {
 [node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/10" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 810.0
-margin_bottom = 35.0
+margin_right = 778.0
+margin_bottom = 55.0
 
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/10"]
-margin_top = 39.0
-margin_right = 810.0
-margin_bottom = 54.0
+margin_top = 59.0
+margin_right = 778.0
+margin_bottom = 74.0
 custom_constants/separation = 15
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/10"]
-margin_top = 58.0
-margin_right = 810.0
-margin_bottom = 948.0
+margin_top = 78.0
+margin_right = 778.0
+margin_bottom = 936.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -216,8 +191,8 @@ __meta__ = {
 }
 
 [node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/10/ScrollContainer"]
-margin_right = 810.0
-margin_bottom = 890.0
+margin_right = 778.0
+margin_bottom = 858.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 6 )
@@ -238,19 +213,19 @@ __meta__ = {
 [node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/20" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 298.0
+margin_right = 788.0
 margin_bottom = 35.0
 
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/20"]
 margin_top = 39.0
-margin_right = 298.0
+margin_right = 788.0
 margin_bottom = 54.0
 custom_constants/separation = 15
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/20"]
 margin_top = 58.0
-margin_right = 298.0
-margin_bottom = 447.0
+margin_right = 788.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -258,8 +233,8 @@ __meta__ = {
 }
 
 [node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/20/ScrollContainer"]
-margin_right = 298.0
-margin_bottom = 389.0
+margin_right = 788.0
+margin_bottom = 902.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 6 )
@@ -281,19 +256,19 @@ __meta__ = {
 [node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/50" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 298.0
-margin_bottom = 35.0
+margin_right = 788.0
+margin_bottom = 55.0
 
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/50"]
-margin_top = 39.0
-margin_right = 298.0
-margin_bottom = 54.0
+margin_top = 59.0
+margin_right = 788.0
+margin_bottom = 74.0
 custom_constants/separation = 15
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/50"]
-margin_top = 58.0
-margin_right = 298.0
-margin_bottom = 447.0
+margin_top = 78.0
+margin_right = 788.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -301,8 +276,8 @@ __meta__ = {
 }
 
 [node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/50/ScrollContainer"]
-margin_right = 298.0
-margin_bottom = 389.0
+margin_right = 788.0
+margin_bottom = 882.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 6 )
@@ -312,6 +287,7 @@ GameCount = 50
 [node name="NewProfile" parent="." instance=ExtResource( 4 )]
 visible = false
 
+[connection signal="pressed" from="HBoxContainer/Profile/AddProfile" to="." method="_on_AddProfile_pressed"]
 [connection signal="toggled" from="HBoxContainer/Exam/Play10" to="." method="_on_Play10_toggled"]
 [connection signal="toggled" from="HBoxContainer/Exam/Play20" to="." method="_on_Play20_toggled"]
 [connection signal="toggled" from="HBoxContainer/Exam/Play50" to="." method="_on_Play50_toggled"]

@@ -1,0 +1,439 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://data/themes/SettingsTheme.tres" type="Theme" id=1]
+[ext_resource path="res://data/textures/bg-01.png" type="Texture" id=2]
+[ext_resource path="res://data/fonts/DejaVuSansMono.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+
+[node name="Panel" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -422.0
+margin_top = -290.0
+margin_right = 422.0
+margin_bottom = 94.0001
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+margin_right = 844.0
+margin_bottom = 87.0
+text = "Nom :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer"]
+margin_top = 91.0
+margin_right = 844.0
+margin_bottom = 199.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="Control/VBoxContainer"]
+margin_top = 203.0
+margin_right = 844.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_horizontal = 3
+
+[node name="Control" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 227.0
+margin_right = 844.0
+margin_bottom = 384.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Ok" type="Button" parent="Control/VBoxContainer/Control"]
+margin_right = 274.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+text = "Ok"
+
+[node name="Control" type="Control" parent="Control/VBoxContainer/Control"]
+margin_left = 278.0
+margin_right = 552.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+
+[node name="Cancel" type="Button" parent="Control/VBoxContainer/Control"]
+margin_left = 556.0
+margin_right = 844.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = 23.0
+margin_right = -29.0
+margin_bottom = -33.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+margin_right = 926.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Options/VBoxContainer"]
+margin_right = 926.0
+margin_bottom = 48.0
+text = "Delete Profile:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/VBoxContainer"]
+margin_top = 52.0
+margin_right = 926.0
+margin_bottom = 112.0
+
+[node name="Example" type="HBoxContainer" parent="Options/VBoxContainer/VBoxContainer"]
+margin_right = 926.0
+margin_bottom = 60.0
+
+[node name="Delete" type="Button" parent="Options/VBoxContainer/VBoxContainer/Example"]
+margin_right = 461.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+text = "Papa"
+
+[node name="Margin" type="Control" parent="Options/VBoxContainer/VBoxContainer/Example"]
+margin_left = 465.0
+margin_right = 926.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="Options/VBoxContainer"]
+margin_top = 116.0
+margin_right = 926.0
+margin_bottom = 164.0
+text = "Volume:"
+
+[node name="Music" type="HBoxContainer" parent="Options/VBoxContainer"]
+margin_top = 168.0
+margin_right = 926.0
+margin_bottom = 216.0
+
+[node name="Delete" type="Label" parent="Options/VBoxContainer/Music"]
+margin_right = 312.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 312, 0 )
+text = "Music:"
+
+[node name="Slider" type="HSlider" parent="Options/VBoxContainer/Music"]
+margin_left = 316.0
+margin_right = 847.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Per" type="Label" parent="Options/VBoxContainer/Music"]
+margin_left = 851.0
+margin_right = 926.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 75, 0 )
+text = "100"
+
+[node name="SFX" type="HBoxContainer" parent="Options/VBoxContainer"]
+margin_top = 220.0
+margin_right = 926.0
+margin_bottom = 268.0
+
+[node name="Delete" type="Label" parent="Options/VBoxContainer/SFX"]
+margin_right = 312.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 312, 0 )
+text = "Sound effect:"
+
+[node name="Slider" type="HSlider" parent="Options/VBoxContainer/SFX"]
+margin_left = 316.0
+margin_right = 847.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Per" type="Label" parent="Options/VBoxContainer/SFX"]
+margin_left = 851.0
+margin_right = 926.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 75, 0 )
+text = "100"
+
+[node name="VSeparator" type="VSeparator" parent="Options"]
+margin_left = 930.0
+margin_right = 934.0
+margin_bottom = 1024.0
+
+[node name="Credits" type="VBoxContainer" parent="Options"]
+margin_left = 938.0
+margin_right = 1864.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Options/Credits"]
+margin_right = 926.0
+margin_bottom = 48.0
+text = "Credits:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Options/Credits"]
+margin_top = 52.0
+margin_right = 926.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "barking <a href='https://www.freepik.com/vectors/tree'>Tree vector created by brgfx - www.freepik.com</a>
+accident <a href='https://www.freepik.com/vectors/banner'>Banner vector created by brgfx - www.freepik.com</a>
+aliments <a href='https://www.freepik.com/vectors/food'>Food vector created by macrovector - www.freepik.com</a>
+allumettes Creative Commons Attribution 4.0 from freevector.com/burning-matches
+alphabet Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160205\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160205\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311119\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311119\">Pixabay</a>
+ancre Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=309481\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=309481\">Pixabay</a>
+ange Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299496\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299496\">Pixabay</a>
+appartement Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=153091\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=153091\">Pixabay</a>
+applaudissement Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=41640\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=41640\">Pixabay</a>
+aquarium Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=156725\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=156725\">Pixabay</a>
+arbre Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2027899\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2027899\">Pixabay</a>
+argent Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159085\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159085\">Pixabay</a>
+assiette Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31732\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31732\">Pixabay</a>
+auto Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=155267\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=155267\">Pixabay</a>
+avion Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161163\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161163\">Pixabay</a>
+baggage Image by <a href=\"https://pixabay.com/users/artrose-16042123/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5520379\">Please support me! Thank you!</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5520379\">Pixabay</a>
+bague Image by <a href=\"https://pixabay.com/users/dr-gero-17435782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5394881\">Macktar N'Diaye</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5394881\">Pixabay</a>
+bain Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299512\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299512\">Pixabay</a>
+balance Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=154516\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=154516\">Pixabay</a>
+ballons Image by <a href=\"https://pixabay.com/users/7089643-7089643/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4246383\">Please Don't sell My Artwork AS IS</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4246383\">Pixabay</a>
+banane Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575773\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575773\">Pixabay</a>
+bateau Image by <a href=\"https://pixabay.com/users/ricinator-3282802/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2020911\">Ricarda Mölck</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2020911\">Pixabay</a>
+bebe Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300498\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300498\">Pixabay</a>
+beigne Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2024545\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2024545\">Pixabay</a>
+bicyclette Image by <a href=\"https://pixabay.com/users/harshal07-2615184/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1456759\">harshal07</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1456759\">Pixabay</a>
+biscuit Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307960\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307960\">Pixabay</a>
+!NG (voir framboise) bleuet <div>Icons made by <a href=\"https://www.flaticon.com/authors/icongeek26\" title=\"Icongeek26\">Icongeek26</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+boite Image by <a href=\"https://pixabay.com/users/nasilzang-2087026/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252639\">moonkee na</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252639\">Pixabay</a>
+bonbons Image by <a href=\"https://pixabay.com/users/mahuasarkar-5775515/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2462970\">Mahua Sarkar</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2462970\">Pixabay</a>
+bougies Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161233\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161233\">Pixabay</a>
+bottle Image by <a href=\"https://pixabay.com/users/starshopping-5014619/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4127009\">StarShopping</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4127009\">Pixabay</a>
+boutons Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1293932\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1293932\">Pixabay</a>
+branche Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1298988\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1298988\">Pixabay</a>
+bras Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2029406\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2029406\">Pixabay</a>
+bureau Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161474\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161474\">Pixabay</a>
+cadeaux Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307882\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307882\">Pixabay</a>
+	Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=147168\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=147168\">Pixabay</a>
+cage <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+camera Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300391\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300391\">Pixabay</a>
+camion Image by <a href=\"https://pixabay.com/users/200degrees-2051452/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2181037\">200 Degrees</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2181037\">Pixabay</a>
+canard Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2024030\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2024030\">Pixabay</a>
+canot Image by <a href=\"https://pixabay.com/users/crystal_blair-16909546/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5275396\">Crystal Blair</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5275396\">Pixabay</a>
+carrotte Image by <a href=\"https://pixabay.com/users/mostafaelturkey36-13328910/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4984620\">Mostafa Elturkey</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4984620\">Pixabay</a>
+casque Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30142\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30142\">Pixabay</a>
+ceinture Image by <a href=\"https://pixabay.com/users/pictures_for_flashcards-19346105/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6126194\">Raka C.</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6126194\">Pixabay</a>	
+cerveau Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=153550\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=153550\">Pixabay</a>
+chaise Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157788\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157788\">Pixabay</a>
+chandail Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=162192\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=162192\">Pixabay</a>
+chapeau Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157581\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157581\">Pixabay</a>
+chat Image by <a href=\"https://pixabay.com/users/starglade-768093/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1531754\">Colleen ODell</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1531754\">Pixabay</a>
+chateau Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299233\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299233\">Pixabay</a>
+chemise Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=309180\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=309180\">Pixabay</a> 
+cheval Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48394\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48394\">Pixabay</a>
+cheveux Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2025597\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2025597\">Pixabay</a>
+chien Image by <a href=\"https://pixabay.com/users/graphicmama-team-2641041/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1417208\">GraphicMama-team</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1417208\">Pixabay</a>
+chocolat Image by <a href=\"https://pixabay.com/users/jedynka-4806708/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2696873\">jedynka</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2696873\">Pixabay</a>
+ciseaux Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=28697\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=28697\">Pixabay</a>
+citrouille Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=23479\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=23479\">Pixabay</a>
+cle Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159330\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159330\">Pixabay</a>
+cloches Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160841\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160841\">Pixabay</a>
+cloture Image by <a href=\"https://pixabay.com/users/pixaline-1569622/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1134180\">Pixaline</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1134180\">Pixabay</a>
+clou <div>Icons made by <a href=\"\" title=\"smalllikeart\">smalllikeart</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+cochon Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=308516\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=308516\">Pixabay</a>
+coeur Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157895\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157895\">Pixabay</a>
+coffre Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=303487\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=303487\">Pixabay</a>
+collier <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+concombre Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575647\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575647\">Pixabay</a>
+couteau Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30015\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30015\">Pixabay</a>
+crayon Image by <a href=\"https://pixabay.com/users/jdam1138-2369245/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2214272\">JDam1138</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2214272\">Pixabay</a>
+dent Image by <a href=\"https://pixabay.com/users/everesd_design-16482457/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5295703\">everesd_design</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5295703\">Pixabay</a>
+desert Image by <a href=\"https://pixabay.com/users/nashart-570652/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2591554\">Nashrulloh Huda</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2591554\">Pixabay</a>
+dessert Image by <a href=\"https://pixabay.com/users/dandelion_tea-15261675/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5948805\">dandelion_tea</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5948805\">Pixabay</a>
+docteur Image by <a href=\"https://pixabay.com/users/rosanegra_1-432510/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1706646\">Alejandra Jimenez</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1706646\">Pixabay</a>
+dormir <a href='https://www.freepik.com/vectors/people'>People vector created by pikisuperstar - www.freepik.com</a>
+ecole Image by <a href=\"https://pixabay.com/users/moteoo-466065/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5217807\">Mote Oo Education</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5217807\">Pixabay</a>
+elephant Image by <a href=\"https://pixabay.com/users/grafikacesky-947552/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1217313\">grafikacesky</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1217313\">Pixabay</a>
+encre Image by <a href=\"https://pixabay.com/users/3070260-3070260/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1582152\">Tan Cundrawan</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1582152\">Pixabay</a>
+epingle a linge Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161687\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161687\">Pixabay</a>
+escalier Image by <a href=\"https://pixabay.com/users/jazella-1930366/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4931155\">Jazella</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4931155\">Pixabay</a>
+etoile Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=158502\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=158502\">Pixabay</a>
+evier <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+explosion Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=417894\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=417894\">Pixabay</a>
+facteur <a href='https://www.freepik.com/vectors/woman'>Woman vector created by macrovector - www.freepik.com</a>
+fantome <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+fenetre Image by <a href=\"https://pixabay.com/users/kmicican-2305081/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1975938\">kmicican</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1975938\">Pixabay</a>
+feu Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30231\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30231\">Pixabay</a>
+feuille <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+fleche Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=150966\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=150966\">Pixabay</a>
+fleurs Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299099\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1299099\">Pixabay</a>
+flute Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=308783\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=308783\">Pixabay</a>
+fontaine Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48692\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48692\">Pixabay</a>
+!NG fraises Image by <a href=\"https://pixabay.com/users/stux-12364/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=299525\">Thanks for your Like • donations welcome</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=299525\">Pixabay</a>
+fraises, bleuet & framboises : <a href='https://www.freepik.com/vectors/food'>Food vector created by macrovector_official - www.freepik.com</a>
+fromage Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575540\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=575540\">Pixabay</a>
+fruits Image by <a href=\"https://pixabay.com/users/iamwahid-1885374/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2411828\">iamwahid</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2411828\">Pixabay</a>
+fusee Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=312767\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=312767\">Pixabay</a>
+fusil Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161223\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=161223\">Pixabay</a>
+gateau Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=25388\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=25388\">Pixabay</a>
+glace <a href='https://www.freepik.com/vectors/water'>Water vector created by freepik - www.freepik.com</a>
+golfe Image by <a href=\"https://pixabay.com/users/7089643-7089643/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4222980\">Please Don't sell My Artwork AS IS</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4222980\">Pixabay</a>
+	Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310994\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310994\">Pixabay</a>
+hache Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42591\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42591\">Pixabay</a>
+hockey Image by <a href=\"https://pixabay.com/users/eslfuntaiwan-415390/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1496359\">eslfuntaiwan</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1496359\">Pixabay</a>
+hopital Image by <a href=\"https://pixabay.com/users/7089643-7089643/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4918290\">Please Don't sell My Artwork AS IS</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4918290\">Pixabay</a>
+horloge Image by <a href=\"https://pixabay.com/users/jjuni-27151/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1141545\">JJuni</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1141545\">Pixabay</a>
+incendie <a href='https://www.freepik.com/vectors/car'>Car vector created by upklyak - www.freepik.com</a>
+insect Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=155017\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=155017\">Pixabay</a>
+jambe <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>.
+journal Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33946\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33946\">Pixabay</a>
+juice Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31728\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31728\">Pixabay</a>
+lapin Image by <a href=\"https://pixabay.com/users/billithecat-7996303/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4064917\">Nina Garman</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4064917\">Pixabay</a>
+legumes Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297918\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297918\">Pixabay</a>
+lion Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300564\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300564\">Pixabay</a>
+livre Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2022464\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2022464\">Pixabay</a>
+lunettes Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159724\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=159724\">Pixabay</a>
+maillot Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310157\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310157\">Pixabay</a>
+main Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1293884\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1293884\">Pixabay</a>
+maison Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=158089\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=158089\">Pixabay</a>
+marteau Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=312416\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=312416\">Pixabay</a>
+miel <div>Icons made by <a href=\"https://www.flaticon.com/authors/monkik\" title=\"monkik\">monkik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+mirror Image by <a href=\"https://pixabay.com/users/7089643-7089643/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3611872\">Please Don't sell My Artwork AS IS</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3611872\">Pixabay</a>
+monstre Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297726\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297726\">Pixabay</a>
+montagne Image by <a href=\"https://pixabay.com/users/lucasgrey-679745/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4828404\">Łukasz Siwy</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4828404\">Pixabay</a>
+montre Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42803\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42803\">Pixabay</a>
+moteur Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160230\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160230\">Pixabay</a>
+mouche Image by <a href=\"https://pixabay.com/users/mostafaelturkey36-13328910/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5487625\">Mostafa Elturkey</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5487625\">Pixabay</a>
+moustache Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=303571\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=303571\">Pixabay</a>
+moustique Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300017\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1300017\">Pixabay</a>
+mouton Image by <a href=\"https://pixabay.com/users/creozavr-2567670/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3539619\">Dmitry Abramov</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3539619\">Pixabay</a>
+nager <a href='https://www.freepik.com/vectors/tree'>Tree vector created by brgfx - www.freepik.com</a>
+nez <div>Icons made by <a href=\"https://www.flaticon.com/authors/vitaly-gorbachev\" title=\"Vitaly Gorbachev\">Vitaly Gorbachev</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+nid Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=46635\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=46635\">Pixabay</a>
+nuage <div>Icons made by <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>
+yeux Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=149670\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=149670\">Pixabay</a>
+oeil Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=154659\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=154659\">Pixabay</a>
+oeuf Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=40292\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=40292\">Pixabay</a>
+oignon Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576534\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576534\">Pixabay</a>
+oiseau Image by <a href=\"https://pixabay.com/users/grafikacesky-947552/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=982861\">grafikacesky</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=982861\">Pixabay</a>
+os Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157272\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=157272\">Pixabay</a>
+pain Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=306914\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=306914\">Pixabay</a>
+pantalon Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1294974\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1294974\">Pixabay</a>
+papillon Image by <a href=\"https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1817644\">Gordon Johnson</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1817644\">Pixabay</a>
+parachute <a href='https://www.freepik.com/vectors/man'>Man vector created by brgfx - www.freepik.com</a>
+parapluie Image by <a href=\"https://pixabay.com/users/kcadrc-3598460/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1767541\">KCADRC</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1767541\">Pixabay</a>
+patate Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576598\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576598\">Pixabay</a>
+patin Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=25495\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=25495\">Pixabay</a>
+phoque <a href='https://www.freepik.com/vectors/water'>Water vector created by brgfx - www.freepik.com</a>
+piano Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31357\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=31357\">Pixabay</a>
+pied Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310736\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=310736\">Pixabay</a>
+pierre <a href='https://www.freepik.com/vectors/design'>Design vector created by macrovector - www.freepik.com</a>
+pinceau Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297095\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1297095\">Pixabay</a>
+piscine <a href='https://www.freepik.com/vectors/people'>People vector created by macrovector - www.freepik.com</a>
+planete Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26618\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26618\">Pixabay</a>
+pneus <a href='https://www.freepik.com/vectors/car'>Car vector created by macrovector - www.freepik.com</a>
+poisson Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30828\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30828\">Pixabay</a>
+<a href=\"https://www.freepik.com/free-vector/teenage-boy-swimming-blue-water_42235307.htm#query=swimming&position=2&from_view=search&track=sph&uuid=1249cd2e-084d-493e-83d7-5c26cfba99a0\">Image by brgfx</a> on Freepik
+<a href=\"https://www.freepik.com/free-vector/isolated-human-nose_2591197.htm#query=nose&position=15&from_view=search&track=sph&uuid=7116ae5a-bbf0-40c6-92bc-01ba0fdadac0\">Image by brgfx</a> on Freepik
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46635\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46635\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=37010\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=37010\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=149675\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=149675\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161613\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161613\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576534\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576534\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/grafikacesky-947552/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=982861\">grafikacesky</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=982861\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=157272\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=157272\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/jjuni-27151/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1381346\">SJ</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1381346\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1294974\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1294974\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2024172\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2024172\">Pixabay</a>
+<a href=\"https://www.freepik.com/free-vector/parachutists-vector-illustrations-set-people-hardhats-masks-flying-with-parachutes-paragliders-skydiving-danger-hobby-adrenaline-sport-concept_11671900.htm#query=parachute&position=1&from_view=search&track=sph&uuid=3915a04e-d53c-4cad-94af-204a268e8610\">Image by pch.vector</a> on Freepik
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159361\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159361\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576598\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576598\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/blue-hat-graphics-24232276/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7208347\">Dimuth Amarasiri</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7208347\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/seal\" title=\"seal icons\">Seal icons created by Flat Icons - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=31357\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=31357\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=310736\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=310736\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576268\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=576268\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=147979\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=147979\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2026994\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2026994\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/samuelchavelas-1537727/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1011501\">Raul Chavelas</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1011501\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=30828\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=30828\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=146561\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=146561\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/isakarakus-2336747/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1783882\">Isa KARAKUS</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1783882\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=151712\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=151712\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=34103\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=34103\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/door\" title=\"door icons\">Door icons created by Freepik - Flaticon</a>
+<a href=\"https://www.flaticon.com/free-icons/chicken\" title=\"chicken icons\">Chicken icons created by Freepik - Flaticon</a>
+<a href=\"https://www.flaticon.com/free-icons/princess\" title=\"princess icons\">Princess icons created by Freepik - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=148332\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=148332\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145940\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=145940\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/queen\" title=\"queen icons\">Queen icons created by Freepik - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46419\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46419\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/king\" title=\"king icons\">King icons created by Freepik - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159678\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159678\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295070\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295070\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=148023\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=148023\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/soap\" title=\"soap icons\">Soap icons created by justicon - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=149929\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=149929\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1293047\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1293047\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/whistle\" title=\"whistle icons\">Whistle icons created by vectorsmarket15 - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6392056\">Gordon Johnson</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6392056\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2025777\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2025777\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=47083\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=47083\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/artrose-16042123/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5635225\">Please support me! Thank you!</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5635225\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/winterflower-17292963/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6762603\">Ilona S</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6762603\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/dutchkid-908326/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4756298\">DutchKid</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4756298\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1300555\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1300555\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1294954\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1294954\">Pixabay</a>
+<a href=\"https://www.vecteezy.com/free-vector/set\">Set Vectors by Vecteezy https://www.vecteezy.com/vector-art/14718486-set-of-carpets-or-rugs-of-different-shapes-colors</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=25308\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=25308\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159621\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=159621\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=151745\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=151745\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=157240\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=157240\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/królestwo_nauki-17664295/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6317497\">Królestwo_Nauki</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6317497\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/mostafaelturkey36-13328910/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4984619\">Mostafa Elturkey</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4984619\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/barrel\" title=\"barrel icons\">Barrel icons created by smashingstocks - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=312107\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=312107\">Pixabay</a>
+<a href=\"https://www.flaticon.com/free-icons/gas\" title=\"gas icons\">Gas icons created by AmethystDesign - Flaticon</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=40953\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=40953\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/prawny-162579/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7705527\">Prawny</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7705527\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=42560\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=42560\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/chippyri-18679434/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5652736\">Chippyri</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5652736\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=33610\">Clker-Free-Vector-Images</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=33610\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1296134\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1296134\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/yabayee-907690/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=705422\">yabayee</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=705422\">Pixabay</a>
+Image by <a href=\"https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=152604\">OpenClipart-Vectors</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=152604\">Pixabay</a>
+Image by <a href=\"https://www.freepik.com/free-vector/hand-drawn-weather-elements-collection_13234770.htm#query=moon&position=8&from_view=search&track=sph&uuid=1c9e3aa7-a190-4a7c-aee7-8ce9ea4b9f1b\">Freepik</a>
+Image by <a href=\"https://www.freepik.com/free-vector/set-halloween-characters_1319239.htm#query=vampire&position=2&from_view=search&track=sph&uuid=e8787f91-a942-4ce1-8cd2-ff1d493205dd\">Freepik</a>
+<a href=\"https://www.freepik.com/free-vector/flat-design-lake-scenery_20285396.htm#query=river&position=7&from_view=search&track=sph&uuid=cc5e9512-1a6e-45e4-9b07-e693fffae097\">Image by pikisuperstar</a> on Freepik"
+
+[connection signal="pressed" from="Control/VBoxContainer/Control/Ok" to="." method="_on_Ok_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Control/Cancel" to="." method="_on_Cancel_pressed"]

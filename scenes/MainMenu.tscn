@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://data/themes/Main.tres" type="Theme" id=1]
 [ext_resource path="res://data/exam_btn_group.tres" type="ButtonGroup" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://data/fonts/dejavu_sans_mono.tres" type="DynamicFont" id=8]
 [ext_resource path="res://data/lang_btn_group.tres" type="ButtonGroup" id=9]
 [ext_resource path="res://data/textures/bg-01.png" type="Texture" id=10]
+[ext_resource path="res://data/textures/settings.png" type="Texture" id=11]
+[ext_resource path="res://scenes/Settings.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -52,6 +56,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Example" type="Button" parent="HBoxContainer/Profile/ScrollContainer/VBoxContainer"]
+visible = false
 margin_right = 494.0
 margin_bottom = 99.0
 rect_min_size = Vector2( 0, 70 )
@@ -284,7 +289,21 @@ script = ExtResource( 6 )
 Row = ExtResource( 7 )
 GameCount = 50
 
+[node name="Settings" type="Button" parent="HBoxContainer/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -100.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 11 )
+icon_align = 1
+expand_icon = true
+
 [node name="NewProfile" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Settings" parent="." instance=ExtResource( 12 )]
 visible = false
 
 [connection signal="pressed" from="HBoxContainer/Profile/AddProfile" to="." method="_on_AddProfile_pressed"]
@@ -293,3 +312,4 @@ visible = false
 [connection signal="toggled" from="HBoxContainer/Exam/Play50" to="." method="_on_Play50_toggled"]
 [connection signal="pressed" from="HBoxContainer/Exam/VBoxContainer/French" to="." method="_on_French_pressed"]
 [connection signal="pressed" from="HBoxContainer/Exam/VBoxContainer/English" to="." method="_on_English_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control/Settings" to="." method="_on_Settings_pressed"]

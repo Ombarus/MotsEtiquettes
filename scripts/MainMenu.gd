@@ -102,3 +102,7 @@ func _on_English_pressed():
 
 func _on_AddProfile_pressed() -> void:
 	get_node("NewProfile").visible = true
+
+
+func _on_Settings_pressed() -> void:
+	pass # Replace with function body.

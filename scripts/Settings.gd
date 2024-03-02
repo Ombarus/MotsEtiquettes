@@ -28,7 +28,6 @@ func _on_sfx_value_changed(value: float) -> void:
 func SetBusVolume(bus_name : String, raw_value : float) -> void:
 	var bus : int = AudioServer.get_bus_index(bus_name)
 	var value : float = ConvertToExpDb(raw_value)
-	print("Setting " + bus_name + " to " + str(value))
 	AudioServer.set_bus_volume_db(bus, value)
 	if value <= -79:
 		AudioServer.set_bus_mute(bus, true)

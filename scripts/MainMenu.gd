@@ -105,4 +105,6 @@ func _on_AddProfile_pressed() -> void:
 
 
 func _on_Settings_pressed() -> void:
-	pass # Replace with function body.
+	var SettingDialog = $Settings
+	SettingDialog.Refresh()
+	SettingDialog.visible = true

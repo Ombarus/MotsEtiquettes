@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://data/themes/SettingsTheme.tres" type="Theme" id=1]
 [ext_resource path="res://data/textures/bg-01.png" type="Texture" id=2]
 [ext_resource path="res://data/fonts/DejaVuSansMono.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/Settings.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -11,79 +12,13 @@ font_data = ExtResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Panel" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 stretch_mode = 2
-
-[node name="Control" type="Control" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -422.0
-margin_top = -290.0
-margin_right = 422.0
-margin_bottom = 94.0001
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Label" type="Label" parent="Control/VBoxContainer"]
-margin_right = 844.0
-margin_bottom = 87.0
-text = "Nom :"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer"]
-margin_top = 91.0
-margin_right = 844.0
-margin_bottom = 199.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Control2" type="Control" parent="Control/VBoxContainer"]
-margin_top = 203.0
-margin_right = 844.0
-margin_bottom = 223.0
-rect_min_size = Vector2( 0, 20 )
-size_flags_horizontal = 3
-
-[node name="Control" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 227.0
-margin_right = 844.0
-margin_bottom = 384.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Ok" type="Button" parent="Control/VBoxContainer/Control"]
-margin_right = 274.0
-margin_bottom = 157.0
-size_flags_horizontal = 3
-text = "Ok"
-
-[node name="Control" type="Control" parent="Control/VBoxContainer/Control"]
-margin_left = 278.0
-margin_right = 552.0
-margin_bottom = 157.0
-size_flags_horizontal = 3
-
-[node name="Cancel" type="Button" parent="Control/VBoxContainer/Control"]
-margin_left = 556.0
-margin_right = 844.0
-margin_bottom = 157.0
-size_flags_horizontal = 3
-text = "Cancel"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Options" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -102,84 +37,130 @@ size_flags_vertical = 3
 [node name="Label" type="Label" parent="Options/VBoxContainer"]
 margin_right = 926.0
 margin_bottom = 48.0
-text = "Delete Profile:"
+text = "Suprimer Profile:"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Options/VBoxContainer"]
 margin_top = 52.0
 margin_right = 926.0
-margin_bottom = 112.0
+margin_bottom = 756.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Example" type="HBoxContainer" parent="Options/VBoxContainer/VBoxContainer"]
+[node name="ProfileList" type="VBoxContainer" parent="Options/VBoxContainer/ScrollContainer"]
+margin_right = 926.0
+margin_bottom = 704.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Example" type="HBoxContainer" parent="Options/VBoxContainer/ScrollContainer/ProfileList"]
+visible = false
 margin_right = 926.0
 margin_bottom = 60.0
 
-[node name="Delete" type="Button" parent="Options/VBoxContainer/VBoxContainer/Example"]
+[node name="Delete" type="Button" parent="Options/VBoxContainer/ScrollContainer/ProfileList/Example"]
 margin_right = 461.0
 margin_bottom = 60.0
 size_flags_horizontal = 3
 text = "Papa"
 
-[node name="Margin" type="Control" parent="Options/VBoxContainer/VBoxContainer/Example"]
+[node name="Margin" type="Control" parent="Options/VBoxContainer/ScrollContainer/ProfileList/Example"]
 margin_left = 465.0
 margin_right = 926.0
 margin_bottom = 60.0
 size_flags_horizontal = 3
 
-[node name="Label2" type="Label" parent="Options/VBoxContainer"]
-margin_top = 116.0
+[node name="HSeparator" type="HSeparator" parent="Options/VBoxContainer"]
+margin_top = 760.0
 margin_right = 926.0
-margin_bottom = 164.0
+margin_bottom = 780.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="VolLabel" type="Label" parent="Options/VBoxContainer"]
+margin_top = 784.0
+margin_right = 926.0
+margin_bottom = 832.0
 text = "Volume:"
 
 [node name="Music" type="HBoxContainer" parent="Options/VBoxContainer"]
-margin_top = 168.0
+margin_top = 836.0
 margin_right = 926.0
-margin_bottom = 216.0
+margin_bottom = 884.0
 
-[node name="Delete" type="Label" parent="Options/VBoxContainer/Music"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/Music"]
 margin_right = 312.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 312, 0 )
-text = "Music:"
+text = "Musique:"
 
 [node name="Slider" type="HSlider" parent="Options/VBoxContainer/Music"]
 margin_left = 316.0
-margin_right = 847.0
+margin_right = 827.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+value = 70.0
 
 [node name="Per" type="Label" parent="Options/VBoxContainer/Music"]
-margin_left = 851.0
+margin_left = 831.0
 margin_right = 926.0
 margin_bottom = 48.0
-rect_min_size = Vector2( 75, 0 )
+rect_min_size = Vector2( 95, 0 )
 text = "100"
 
 [node name="SFX" type="HBoxContainer" parent="Options/VBoxContainer"]
-margin_top = 220.0
+margin_top = 888.0
 margin_right = 926.0
-margin_bottom = 268.0
+margin_bottom = 936.0
 
-[node name="Delete" type="Label" parent="Options/VBoxContainer/SFX"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/SFX"]
 margin_right = 312.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 312, 0 )
-text = "Sound effect:"
+text = "Effets:"
 
 [node name="Slider" type="HSlider" parent="Options/VBoxContainer/SFX"]
 margin_left = 316.0
-margin_right = 847.0
+margin_right = 827.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+value = 70.0
 
 [node name="Per" type="Label" parent="Options/VBoxContainer/SFX"]
-margin_left = 851.0
+margin_left = 831.0
 margin_right = 926.0
 margin_bottom = 48.0
-rect_min_size = Vector2( 75, 0 )
+rect_min_size = Vector2( 95, 0 )
 text = "100"
+
+[node name="HSeparator2" type="HSeparator" parent="Options/VBoxContainer"]
+margin_top = 940.0
+margin_right = 926.0
+margin_bottom = 960.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer"]
+margin_top = 964.0
+margin_right = 926.0
+margin_bottom = 1024.0
+
+[node name="Control2" type="Control" parent="Options/VBoxContainer/HBoxContainer"]
+margin_right = 306.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="Close" type="Button" parent="Options/VBoxContainer/HBoxContainer"]
+margin_left = 310.0
+margin_right = 616.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+text = "Fermer"
+
+[node name="Control" type="Control" parent="Options/VBoxContainer/HBoxContainer"]
+margin_left = 620.0
+margin_right = 926.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
 
 [node name="VSeparator" type="VSeparator" parent="Options"]
 margin_left = 930.0
@@ -196,7 +177,7 @@ size_flags_vertical = 3
 [node name="Label" type="Label" parent="Options/Credits"]
 margin_right = 926.0
 margin_bottom = 48.0
-text = "Credits:"
+text = "Crédits:"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Options/Credits"]
 margin_top = 52.0
@@ -435,5 +416,6 @@ Image by <a href=\"https://www.freepik.com/free-vector/hand-drawn-weather-elemen
 Image by <a href=\"https://www.freepik.com/free-vector/set-halloween-characters_1319239.htm#query=vampire&position=2&from_view=search&track=sph&uuid=e8787f91-a942-4ce1-8cd2-ff1d493205dd\">Freepik</a>
 <a href=\"https://www.freepik.com/free-vector/flat-design-lake-scenery_20285396.htm#query=river&position=7&from_view=search&track=sph&uuid=cc5e9512-1a6e-45e4-9b07-e693fffae097\">Image by pikisuperstar</a> on Freepik"
 
-[connection signal="pressed" from="Control/VBoxContainer/Control/Ok" to="." method="_on_Ok_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Control/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="value_changed" from="Options/VBoxContainer/Music/Slider" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Options/VBoxContainer/SFX/Slider" to="." method="_on_sfx_value_changed"]
+[connection signal="pressed" from="Options/VBoxContainer/HBoxContainer/Close" to="." method="_on_Close_pressed"]

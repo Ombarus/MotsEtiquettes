@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Card.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Board.gd" type="Script" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://data/textures/bg-01.png" type="Texture" id=5]
 [ext_resource path="res://data/sounds/main_menu_hopscotch_purple_planet.mp3" type="AudioStream" id=6]
 [ext_resource path="res://scripts/Sounds.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Sparks.tscn" type="PackedScene" id=8]
+[ext_resource path="res://data/sounds/yay-cc0.wav" type="AudioStream" id=9]
+[ext_resource path="res://data/sounds/bad.wav" type="AudioStream" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.176471, 0.52549, 0.12549, 1 )
@@ -125,14 +128,30 @@ align = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Panel" parent="Success"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 1 )
+
+[node name="Control" type="Control" parent="Success/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Sparks" parent="Success/Panel/Control" instance=ExtResource( 8 )]
+scale = Vector2( 2.5, 2 )
+
+[node name="Yay" type="AudioStreamPlayer" parent="Success/Panel/Control"]
+stream = ExtResource( 9 )
+bus = "Sfx"
+
+[node name="Tween" type="Tween" parent="Success/Panel/Control"]
 
 [node name="Label" type="Label" parent="Success/Panel"]
 anchor_left = 0.5
@@ -172,5 +191,9 @@ margin_bottom = 73.0
 text = "Manqué :("
 align = 1
 valign = 1
+
+[node name="Fail" type="AudioStreamPlayer" parent="Fail/Panel"]
+stream = ExtResource( 10 )
+bus = "Sfx"
 
 [node name="MainMenu" parent="." instance=ExtResource( 4 )]

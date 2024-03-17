@@ -13,18 +13,24 @@ func _on_Play10_toggled(button_pressed):
 	if button_pressed:
 		Events.emit_signal("StartGame", GetProfileName(), 10)
 		self.visible = false
+		var leaderboardTab : TabContainer = $HBoxContainer/Control/TabContainer
+		leaderboardTab.current_tab = 0
 
 
 func _on_Play20_toggled(button_pressed):
 	if button_pressed:
 		Events.emit_signal("StartGame", GetProfileName(), 20)
 		self.visible = false
+		var leaderboardTab : TabContainer = $HBoxContainer/Control/TabContainer
+		leaderboardTab.current_tab = 1
 
 
 func _on_Play50_toggled(button_pressed):
 	if button_pressed:
 		Events.emit_signal("StartGame", GetProfileName(), 50)
 		self.visible = false
+		var leaderboardTab : TabContainer = $HBoxContainer/Control/TabContainer
+		leaderboardTab.current_tab = 2
 
 
 func ReloadProfiles():

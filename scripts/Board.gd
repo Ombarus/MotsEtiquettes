@@ -12,7 +12,11 @@ var Paused = true
 var _last_tap : int = -1000
 
 onready var _success : Control = get_node("../Success")
+var _success_sparks : CPUParticles2D
+var _success_sfx : AudioStreamPlayer
+var _success_sfx_tween : Tween
 onready var _fail : Control = get_node("../Fail")
+var _fail_sfx : AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,6 +31,12 @@ func _ready():
 	Events.connect("StartGame", self, "StartGame_Callback")
 	Events.connect("EndGame", self, "EndGame_Callback")
 	get_node("HBoxContainer/Rate").text = "%d / %d" % [_num_success, _num_play]
+	
+	_success_sparks = _success.find_node("SuccessSparks", true, false)
+	_success_sfx = _success.find_node("Yay", true, false)
+	_success_sfx_tween = _success.find_node("Tween", true, false)
+	
+	_fail_sfx = _fail.find_node("Fail", true, false)
 	
 func Play():
 	if Paused or CheckEndGame() == true:
@@ -67,8 +77,14 @@ func OnCardClicked_Callback(name : String):
 	if CurrentCard.Name == name:
 		_success.visible = true
 		_num_success += 1
+		_success_sparks.restart()
+		_success_sparks.emitting = true
+		_success_sfx_tween.remove_all()
+		_success_sfx.volume_db = 0.0
+		_success_sfx.play()
 	else:
 		_fail.visible = true
+		_fail_sfx.play()
 	
 	_num_play += 1
 	_wait_time = 0.0
@@ -82,6 +98,7 @@ func _process(delta : float):
 		if _wait_time >= 4.0:
 			_success.visible = false
 			_fail.visible = false
+			_success_sparks.emitting = false
 			Play()
 	else:
 		_play_time += delta
@@ -95,6 +112,9 @@ func _input(event):
 		if not event.pressed:
 			_success.visible = false
 			_fail.visible = false
+			_success_sparks.emitting = false
+			_success_sfx_tween.interpolate_property(_success_sfx, "volume_db", 0, -80, 0.3, Tween.TRANS_SINE, Tween.EASE_IN, 0)
+			_success_sfx_tween.start()
 			Play()
 
 func CheckEndGame() -> bool:

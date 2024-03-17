@@ -1,9 +1,9 @@
 X implement add profile button
 X scroll profile section
 X button styling
-- delete profile interface
+X delete profile interface
 X improve high score font
-- focus tab after match
+X focus tab after match
 - Icon Design
-- Add particle fx to "BRAVO!"
-- Add credit section
+X Add particle fx to "BRAVO!"
+X Add credit section

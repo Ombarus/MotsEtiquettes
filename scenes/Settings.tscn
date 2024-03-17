@@ -188,7 +188,8 @@ size_flags_vertical = 3
 custom_fonts/mono_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "- barking [url=https://www.freepik.com/vectors/tree]Tree vector created by brgfx - www.freepik.com[/url]
+bbcode_text = "- Godot Engine: [url=https://godotengine.org/license]License[/url]
+- barking [url=https://www.freepik.com/vectors/tree]Tree vector created by brgfx - www.freepik.com[/url]
 - accident [url=https://www.freepik.com/vectors/banner]Banner vector created by brgfx - www.freepik.com[/url]
 - aliments [url=https://www.freepik.com/vectors/food]Food vector created by macrovector - www.freepik.com[/url]
 - allumettes Creative Commons Attribution 4.0 from freevector.com/burning-matches
@@ -417,7 +418,8 @@ bbcode_text = "- barking [url=https://www.freepik.com/vectors/tree]Tree vector c
 - [url=https://www.freepik.com/free-vector/flat-design-lake-scenery_20285396.htm#query=river&position=7&from_view=search&track=sph&uuid=cc5e9512-1a6e-45e4-9b07-e693fffae097]Image by pikisuperstar[/url] on Freepik
 
 "
-text = "- barking Tree vector created by brgfx - www.freepik.com
+text = "- Godot Engine: License
+- barking Tree vector created by brgfx - www.freepik.com
 - accident Banner vector created by brgfx - www.freepik.com
 - aliments Food vector created by macrovector - www.freepik.com
 - allumettes Creative Commons Attribution 4.0 from freevector.com/burning-matches

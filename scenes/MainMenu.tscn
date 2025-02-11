@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://data/themes/Main.tres" type="Theme" id=1]
 [ext_resource path="res://data/exam_btn_group.tres" type="ButtonGroup" id=2]
@@ -12,6 +12,11 @@
 [ext_resource path="res://data/textures/bg-01.png" type="Texture" id=10]
 [ext_resource path="res://data/textures/settings.png" type="Texture" id=11]
 [ext_resource path="res://scenes/Settings.tscn" type="PackedScene" id=12]
+[ext_resource path="res://data/fonts/DejaVuSansMono.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -157,12 +162,20 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.61
 
-[node name="TabContainer" type="TabContainer" parent="HBoxContainer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer/Control/VBoxContainer"]
+margin_right = 796.0
+margin_bottom = 1008.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = ExtResource( 8 )
 
-[node name="10" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer"]
+[node name="10" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 12.0
@@ -173,37 +186,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/10" instance=ExtResource( 7 )]
+[node name="LeaderboardRow" parent="HBoxContainer/Control/VBoxContainer/TabContainer/10" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 778.0
 margin_bottom = 55.0
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/10"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/VBoxContainer/TabContainer/10"]
 margin_top = 59.0
 margin_right = 778.0
 margin_bottom = 74.0
 custom_constants/separation = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/10"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/10"]
 margin_top = 78.0
 margin_right = 778.0
-margin_bottom = 936.0
+margin_bottom = 908.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/10/ScrollContainer"]
+[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/10/ScrollContainer"]
 margin_right = 778.0
-margin_bottom = 858.0
+margin_bottom = 830.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 6 )
 Row = ExtResource( 7 )
 
-[node name="20" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer"]
+[node name="20" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -215,19 +228,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/20" instance=ExtResource( 7 )]
+[node name="LeaderboardRow" parent="HBoxContainer/Control/VBoxContainer/TabContainer/20" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 788.0
 margin_bottom = 55.0
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/20"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/VBoxContainer/TabContainer/20"]
 margin_top = 59.0
 margin_right = 788.0
 margin_bottom = 74.0
 custom_constants/separation = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/20"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/20"]
 margin_top = 78.0
 margin_right = 788.0
 margin_bottom = 960.0
@@ -237,7 +250,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/20/ScrollContainer"]
+[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/20/ScrollContainer"]
 margin_right = 788.0
 margin_bottom = 882.0
 size_flags_horizontal = 3
@@ -246,7 +259,7 @@ script = ExtResource( 6 )
 Row = ExtResource( 7 )
 GameCount = 20
 
-[node name="50" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer"]
+[node name="50" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -258,19 +271,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeaderboardRow" parent="HBoxContainer/Control/TabContainer/50" instance=ExtResource( 7 )]
+[node name="LeaderboardRow" parent="HBoxContainer/Control/VBoxContainer/TabContainer/50" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 788.0
 margin_bottom = 55.0
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/TabContainer/50"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/VBoxContainer/TabContainer/50"]
 margin_top = 59.0
 margin_right = 788.0
 margin_bottom = 74.0
 custom_constants/separation = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/TabContainer/50"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/50"]
 margin_top = 78.0
 margin_right = 788.0
 margin_bottom = 960.0
@@ -280,7 +293,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/TabContainer/50/ScrollContainer"]
+[node name="Leaderboard" type="VBoxContainer" parent="HBoxContainer/Control/VBoxContainer/TabContainer/50/ScrollContainer"]
 margin_right = 788.0
 margin_bottom = 882.0
 size_flags_horizontal = 3
@@ -288,6 +301,14 @@ size_flags_vertical = 3
 script = ExtResource( 6 )
 Row = ExtResource( 7 )
 GameCount = 50
+
+[node name="Label" type="Label" parent="HBoxContainer/Control/VBoxContainer"]
+margin_top = 1012.0
+margin_right = 796.0
+margin_bottom = 1036.0
+custom_fonts/font = SubResource( 2 )
+text = "v1.0.0"
+align = 2
 
 [node name="Settings" type="Button" parent="HBoxContainer/Control"]
 anchor_left = 1.0

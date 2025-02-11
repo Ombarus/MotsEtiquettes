@@ -7,3 +7,5 @@ X focus tab after match
 - Icon Design
 X Add particle fx to "BRAVO!"
 X Add credit section
+- Remember Lang Selection
+- clear highscore

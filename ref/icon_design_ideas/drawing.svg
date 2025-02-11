@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="192mm"
+   height="192mm"
+   viewBox="0 0 192 192"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="drawing.svg"
+   inkscape:export-filename="..\..\data\textures\icons\432-fg.png"
+   inkscape:export-xdpi="57.150002"
+   inkscape:export-ydpi="57.150002"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     width="192mm"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="469.5189"
+     inkscape:cy="242.18407"
+     inkscape:window-width="3840"
+     inkscape:window-height="2089"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:lockguides="false"
+     showguides="true"
+     inkscape:export-bgcolor="#ffffff00">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       units="mm"
+       spacingx="16"
+       spacingy="16"
+       originx="0"
+       originy="0" />
+    <sodipodi:guide
+       position="19.401626,69.460206"
+       orientation="-179.85821,179.85821"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="79.066188,117.0477"
+       orientation="125.39287,125.39287"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="112.24305,71.793749"
+       orientation="179.85821,-179.85821"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="52.578485,24.206267"
+       orientation="-125.39287,-125.39287"
+       id="guide8"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="110.06053"
+       y="94.511961"
+       width="390.46017"
+       height="170.97768"
+       id="rect8" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#5e70a6;fill-opacity:1;stroke:none;stroke-width:1.21027;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect853"
+       width="79.999924"
+       height="31.999969"
+       x="56.000061"
+       y="56.000061"
+       ry="4.2699733" />
+    <path
+       d="m 125.20227,91.970731 -21.20231,21.202299 v 18.55699 c 0,2.36557 1.90445,4.27002 4.27002,4.27002 h 23.46004 c 2.36557,0 4.27002,-1.90445 4.27002,-4.27002 V 96.240493 c 0,-2.365566 -1.90445,-4.269762 -4.27002,-4.269762 z"
+       style="fill:#5e70a6;fill-opacity:1;stroke-width:0.897859;stroke-linejoin:round"
+       id="path2" />
+    <path
+       d="M 120.2248,91.999929 H 74.970751 L 64.000056,102.97073 c -1.672665,1.67268 -1.672673,4.36597 0,6.03865 l 16.588637,16.58837 c 1.672673,1.67267 4.365714,1.67267 6.038385,0 z"
+       style="fill:#a84a5e;fill-opacity:1;stroke-width:0.878886;stroke-linejoin:round"
+       id="path8"
+       sodipodi:nodetypes="ccsccsc" />
+    <circle
+       style="fill:#69304c;fill-opacity:1;stroke-width:1.0825;stroke-linejoin:round"
+       id="path1"
+       cx="123.74182"
+       cy="72.000046"
+       r="4.2581801" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.9305px;line-height:1.25;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';fill:#ffffff;fill-opacity:1;stroke-width:0.132291"
+       x="59.688141"
+       y="80.319092"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.9305px;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';fill:#ffffff;fill-opacity:1;stroke-width:0.132291"
+         x="59.688141"
+         y="80.319092">Mots</tspan></text>
+    <rect
+       style="fill:#5e70a6;fill-opacity:1;stroke:none;stroke-width:2.42054;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect853-0"
+       width="160"
+       height="63.999996"
+       x="325.4917"
+       y="16"
+       ry="8.5399542" />
+    <path
+       d="m 463.89622,87.9414 -42.40465,42.40465 v 37.11401 c 0,4.73114 3.80891,8.54005 8.54005,8.54005 h 46.92013 c 4.73114,0 8.54005,-3.80891 8.54005,-8.54005 V 96.48093 c 0,-4.73113 -3.80891,-8.53953 -8.54005,-8.53953 z"
+       style="fill:#5e70a6;fill-opacity:1;stroke-width:1.79572;stroke-linejoin:round"
+       id="path2-9" />
+    <path
+       d="M 453.94127,87.9998 H 363.4331 l -21.94141,21.94162 c -3.34533,3.34536 -3.34535,8.73195 0,12.0773 l 33.1773,33.17678 c 3.34535,3.34535 8.73144,3.34535 12.07679,0 z"
+       style="fill:#a84a5e;fill-opacity:1;stroke-width:1.75778;stroke-linejoin:round"
+       id="path8-4"
+       sodipodi:nodetypes="ccsccsc" />
+    <circle
+       style="fill:#69304c;fill-opacity:1;stroke-width:2.165;stroke-linejoin:round"
+       id="path1-8"
+       cx="460.97534"
+       cy="48"
+       r="8.5163679" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';stroke-width:0.264583"
+       x="335.01376"
+       y="64.638092"
+       id="text8-8"><tspan
+         sodipodi:role="line"
+         id="tspan8-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';stroke-width:0.264583"
+         x="335.01376"
+         y="64.638092">Mots</tspan></text>
+    <rect
+       style="fill:#5e70a6;fill-opacity:1;stroke:none;stroke-width:2.42054;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect853-4"
+       width="160"
+       height="63.999996"
+       x="325.49167"
+       y="188.30083"
+       ry="8.5399542" />
+    <path
+       d="m 463.89622,260.24223 -42.40465,42.40465 v 37.11401 c 0,4.73114 3.80891,8.54005 8.54005,8.54005 h 46.92013 c 4.73114,0 8.54005,-3.80891 8.54005,-8.54005 v -70.97913 c 0,-4.73114 -3.80891,-8.53953 -8.54005,-8.53953 z"
+       style="fill:#5e70a6;fill-opacity:1;stroke-width:1.79572;stroke-linejoin:round"
+       id="path2-5" />
+    <path
+       d="M 453.94127,260.30062 H 363.4331 l -21.94141,21.94163 c -3.34533,3.34536 -3.34535,8.73195 0,12.0773 l 33.1773,33.17678 c 3.34535,3.34535 8.73144,3.34535 12.07679,0 z"
+       style="fill:#a84a5e;fill-opacity:1;stroke-width:1.75778;stroke-linejoin:round"
+       id="path8-5"
+       sodipodi:nodetypes="ccsccsc" />
+    <circle
+       style="fill:#69304c;fill-opacity:1;stroke-width:2.165;stroke-linejoin:round"
+       id="path1-1"
+       cx="460.97531"
+       cy="220.30083"
+       r="8.5163679" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi';stroke-width:0.264583"
+       x="351.9509"
+       y="232.47063"
+       id="text8-7"><tspan
+         sodipodi:role="line"
+         id="tspan8-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi';stroke-width:0.264583"
+         x="351.9509"
+         y="232.47063">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:Caladea;-inkscape-font-specification:Caladea;stroke-width:0.264583"
+       x="608.7876"
+       y="25.4"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:Caladea;-inkscape-font-specification:Caladea;stroke-width:0.264583"
+         x="608.7876"
+         y="25.4">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:Constantia;-inkscape-font-specification:Constantia;stroke-width:0.264583"
+       x="608.7876"
+       y="64.011078"
+       id="text1-1"><tspan
+         sodipodi:role="line"
+         id="tspan1-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:Constantia;-inkscape-font-specification:Constantia;stroke-width:0.264583"
+         x="608.7876"
+         y="64.011078">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'David Libre';-inkscape-font-specification:'David Libre';stroke-width:0.264583"
+       x="608.7876"
+       y="102.62215"
+       id="text1-6"><tspan
+         sodipodi:role="line"
+         id="tspan1-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'David Libre';-inkscape-font-specification:'David Libre';stroke-width:0.264583"
+         x="608.7876"
+         y="102.62215">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Gentium Book Basic';-inkscape-font-specification:'Gentium Book Basic';stroke-width:0.264583"
+       x="608.7876"
+       y="141.23323"
+       id="text1-1-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Gentium Book Basic';-inkscape-font-specification:'Gentium Book Basic';stroke-width:0.264583"
+         x="608.7876"
+         y="141.23323">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Hey Jack Free Version';-inkscape-font-specification:'Hey Jack Free Version';stroke-width:0.264583"
+       x="608.7876"
+       y="179.84431"
+       id="text1-3"><tspan
+         sodipodi:role="line"
+         id="tspan1-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Hey Jack Free Version';-inkscape-font-specification:'Hey Jack Free Version';stroke-width:0.264583"
+         x="608.7876"
+         y="179.84431">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'MV Boli';-inkscape-font-specification:'MV Boli';stroke-width:0.264583"
+       x="608.7876"
+       y="218.45538"
+       id="text1-1-2"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'MV Boli';-inkscape-font-specification:'MV Boli';stroke-width:0.264583"
+         x="608.7876"
+         y="218.45538">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Miriam Libre';-inkscape-font-specification:'Miriam Libre';stroke-width:0.264583"
+       x="608.7876"
+       y="257.06647"
+       id="text1-6-6"><tspan
+         sodipodi:role="line"
+         id="tspan1-1-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Miriam Libre';-inkscape-font-specification:'Miriam Libre';stroke-width:0.264583"
+         x="608.7876"
+         y="257.06647">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:Chewy;-inkscape-font-specification:Chewy;stroke-width:0.264583"
+       x="608.7876"
+       y="295.67755"
+       id="text1-1-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-2-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:Chewy;-inkscape-font-specification:Chewy;stroke-width:0.264583"
+         x="608.7876"
+         y="295.67755">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:Mogra;-inkscape-font-specification:Mogra;stroke-width:0.264583"
+       x="742.23346"
+       y="25.4"
+       id="text1-61"><tspan
+         sodipodi:role="line"
+         id="tspan1-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:Mogra;-inkscape-font-specification:Mogra;stroke-width:0.264583"
+         x="742.23346"
+         y="25.4">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Segoe Script';-inkscape-font-specification:'Segoe Script';stroke-width:0.264583"
+       x="742.23346"
+       y="64.01107"
+       id="text1-1-9"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-27"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Segoe Script';-inkscape-font-specification:'Segoe Script';stroke-width:0.264583"
+         x="742.23346"
+         y="64.01107">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';stroke-width:0.264583"
+       x="742.23346"
+       y="102.62214"
+       id="text1-6-9"><tspan
+         sodipodi:role="line"
+         id="tspan1-1-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:'Luckiest Guy';-inkscape-font-specification:'Luckiest Guy';stroke-width:0.264583"
+         x="742.23346"
+         y="102.62214">Mots</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;line-height:1.25;font-family:Chewy;-inkscape-font-specification:Chewy;stroke-width:0.264583"
+       x="742.23346"
+       y="141.23322"
+       id="text1-1-4-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-2-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.8611px;font-family:Chewy;-inkscape-font-specification:Chewy;stroke-width:0.264583"
+         x="742.23346"
+         y="141.23322">Mots</tspan></text>
+  </g>
+</svg>

@@ -307,7 +307,7 @@ margin_top = 1012.0
 margin_right = 796.0
 margin_bottom = 1036.0
 custom_fonts/font = SubResource( 2 )
-text = "v1.0.0"
+text = "v1.0.1"
 align = 2
 
 [node name="Settings" type="Button" parent="HBoxContainer/Control"]

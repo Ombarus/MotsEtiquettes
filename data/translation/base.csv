@@ -2,7 +2,7 @@ id,fr,en,ja
 aboiement,aboiement,barking,吠える
 accident,accident,accident,事故
 addition,addition,addition,追加
-allumetes-c,allumettes,matches,マッチ
+allumetes,allumettes,matches,マッチ
 alphabet,alphabet,alphabet,ローマ字
 ampoule,ampoule,light bulb,バルブ
 ancre,ancre,anchor,アンカー
@@ -224,6 +224,6 @@ Effets:,Effets:,Sounds:,SFX：
 Fermer,Fermer,Close,閉じる
 Crédits:,Crédits:,Credits:,Credits:
 BRAVO !!!,BRAVO !!!,CONGRATS !!!,やった！！！
-Manqué :(,Manqué :(,Wrong :(,ダメだった
+Miss,"Manqué :(","Wrong :(","ダメだった"
 
 
